@@ -1,6 +1,6 @@
-function y = funcAnt( Params )
+function y = funcInhib( k )
 
-    y = Params.KA;
+    y = k;
 
 end
 

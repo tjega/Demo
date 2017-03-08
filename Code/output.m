@@ -12,8 +12,8 @@ function[] = output(file, t, y, Params)
     end
 
     fprintf(fileID, '\n');
-    fprintf(fileID, '%s\t\t\t %s\t\t\t\t %s\t\t\t\t %s\n','TIME', 'S1', 'S1', 'X1');
+    fprintf(fileID, '%s\t\t\t %s\t\t\t\t %s\t\t\t\t %s\t\t\t\t %s\n','TIME', 'S', 'X1', 'X2', 'P');
     table = [t y];
-    fprintf(fileID, '%f\t\t %f\t\t %f\t\t %f\n', transpose(table));
+    fprintf(fileID, '%f\t\t %f\t\t %f\t\t %f\t\t %f\n', transpose(table));
     
     fclose(fileID);
