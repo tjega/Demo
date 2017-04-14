@@ -14,12 +14,12 @@ function dydt = chemostatOde(t, y, Params)
                                 (1/Params.Y2)*fs(y(1), Params.K2, Params.mu2)*y(3);       %ds/dt
     
     dydt(2)   =   fs(y(1), Params.K1, Params.mu1)*y(2) - ...
-                            Params.D * y(2) - g(Params.alpha) * y(2);                     %dx1/dt
+                            Params.D * y(2) - g(Params.alpha, y(4)) * y(2);                     %dx1/dt
     
     dydt(3)   =   fs(y(1),Params.K2, Params.mu2)*y(3)  - ...
                             Params.D * y(3);                                              %dx2/dt
                         
     dydt(4)   =   h(y(1),Params.Kp, Params.mup, Params.H)*y(3) ...
-                            - Params.D*y(4) - (1/Params.Yp)*g(Params.alpha)*y(2);         %dp/dt
+                            - Params.D*y(4) - (1/Params.Yp)*g(Params.alpha, y(4))*y(2);         %dp/dt
                         
     dydt      =   dydt(:);

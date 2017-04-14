@@ -1,6 +1,6 @@
-function y = funcInhib( k )
+function y = funcInhib( k, P )
 
-    y = k;
+    y = k * P;
 
 end
 
