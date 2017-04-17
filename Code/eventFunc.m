@@ -20,7 +20,7 @@ function [ x, isterm, dir ] = eventFunc( t, y, Params )
                         
     dydt      =   dydt(:);
     
-    x = norm(dydt) - 1e-4;
+    x = norm(dydt) - 1e-7;
     isterm = 1;
     dir =0;
 
