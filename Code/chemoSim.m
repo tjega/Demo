@@ -1,4 +1,4 @@
-for i = 41 : 50
-    inputfile = sprintf('Eq_test_%d.in', i);
+for i = 1 : 101
+    inputfile = sprintf('X2_0_test_%d.in', i);
     main(inputfile);
 end

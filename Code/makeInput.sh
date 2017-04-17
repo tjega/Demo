@@ -1,5 +1,5 @@
 #!/bin/bash
 
-for i in {41..50}; do 
-    awk -v i="$i" 'NR==30{$0= 0.587960+(i-40)*0.000001}1;' "test.in" > "Eq_test_$i.in";  
+for i in {1..101}; do 
+    awk -v i="$i" 'NR==6{$0= 0.5+(i-1)*0.01}1;' "test.in" > "X2_0_test_$i.in";
 done
